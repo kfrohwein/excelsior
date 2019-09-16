@@ -1,0 +1,10 @@
+{
+    "name": "kfrohwein/excelsior",
+    "license": "MIT",
+    "type": "library",
+    "description": "Predefined templates for sulu.io",
+    "require": {
+        "php": "^7.2",
+        "sulu/sulu": "dev-develop"
+    }
+}
