@@ -19,11 +19,16 @@
 
         <xi:include href="../includes/mandatory.xml"/>
 
-        <property name="article" type="text_editor">
+        <block name="blocks" default-type="excelsior-paragraph" minOccurs="0">
             <meta>
-                <title lang="en">Article</title>
-                <title lang="de">Artikel</title>
+                <title lang="en">Content</title>
+                <title lang="de">Inhalt</title>
             </meta>
-        </property>
+
+            <types>
+                <xi:include href="../blocks/excelsior-paragraph.xml"/>
+            </types>
+        </block>
+
     </properties>
 </template>

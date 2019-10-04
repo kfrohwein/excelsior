@@ -1,0 +1,12 @@
+{% set propertyName = propertyName|default('blocks') %}
+
+{% if blocks|length %}
+    <div property="{{ propertyName }}" typeof="collection">
+        {% for block in blocks %}
+            {% include ('@Excelsior/blocks/' ~ block.type ~ '.html.twig') with {
+                'block' : block,
+                'propertyName': propertyName
+            } %}
+        {% endfor %}
+    </div>
+{% endif %}

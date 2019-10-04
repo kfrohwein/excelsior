@@ -1,0 +1,9 @@
+{% set propertyName = propertyName|default('blocks') %}
+
+<div rel="{{ propertyName }}" typeof="block">
+    {% if block.heading|default('') %}
+        <h2 class="heading-h2">
+            {{ block.heading }}
+        </h2>
+    {% endif %}
+</div>
