@@ -1,9 +1,24 @@
 {% set propertyName = propertyName|default('blocks') %}
 
-<div rel="{{ propertyName }}" typeof="block">
-    {% if block.heading|default('') %}
-        <h2 class="heading-h2">
-            {{ block.heading }}
-        </h2>
+<div class="paragraph" rel="{{ propertyName }}" typeof="block">
+    {% block headlines %}
+        {% if block.kicker %}
+            <div property="kicker" class="paragraph__kicker">{{ block.kicker }}</div>
+        {% endif %}
+        {% if block.headline %}
+            <h1 property="headline" class="paragraph__headline">{{ block.headline }}</h1>
+        {% endif %}
+        {% if block.subheadline %}
+            <h2 property="subheadline" class="paragraph__subheadline">{{ block.subheadline }}</h2>
+        {% endif %}
+    {% endblock %}
+
+    {% include ('@Excelsior/includes/excelsior-multimedia.html.twig') with {
+        'multimedia' : block.multimedia
+    } %}
+
+    {% if block.text %}
+        <div  property="text" class="paragraph__text">{{ block.text|raw }}</div>
     {% endif %}
+
 </div>

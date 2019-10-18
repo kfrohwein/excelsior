@@ -12,8 +12,8 @@
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title lang="en">Title</title>
-                <title lang="de">Titel</title>
+                <title lang="en">Title (For the browser and internal usage)</title>
+                <title lang="de">Titel (Für den Browser und interne Nutzung)</title>
             </meta>
             <params>
                 <param name="headline" value="true"/>

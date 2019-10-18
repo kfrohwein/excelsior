@@ -16,7 +16,7 @@
             </meta>
         </property>
 
-        <property name="Headline" type="text_line">
+        <property name="headline" type="text_line">
             <meta>
                 <title lang="en">Headline</title>
                 <title lang="de">Überschrift</title>
